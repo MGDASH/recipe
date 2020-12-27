@@ -10,7 +10,7 @@ export default class Search{ //1 l code uchiraas default
             this.result = result.data.recipes;
           return this.result;
         }catch(error){
-            alert('Asuudal garlaa : ' + error);
+            console.log('Asuudal garlaa : ' + error);
     
         }
        
