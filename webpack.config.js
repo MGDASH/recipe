@@ -4,11 +4,11 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: "./src/js/index.js",
   output: {
-    filename: "main.js",
-    path: path.resolve(__dirname, "dist")
+    filename: "js/main.js",//js folder uusgeed dotor ni js ee hiisen. olon js folder dotor bbal tsegtstei
+    path: path.resolve(__dirname, "docs")//git page deer tabihiin tuld docs gej oorchloh
   },
   devServer: {
-    contentBase: "./dist"
+    contentBase: "./docs"//git page deer tabihiin tuld docs gej oorchloh
   },
   plugins: [
     new HtmlWebpackPlugin({
