@@ -5,7 +5,8 @@ export const elements = {
     searchForm: document.querySelector('.search'), //ingej css holbootoi ner oorchloh
     searchInput: document.querySelector('.search__field'),
     searchResultDiv: document.querySelector('.results'),//html iinhaa resultDiv dotor unshij bna gesen heseg hiih
-    searchResultList: document.querySelector(".results__list") //index.html eesee copydoj absan iisheegee inject hiine 
+    searchResultList: document.querySelector(".results__list"), //index.html eesee copydoj absan iisheegee inject hiine 
+    pageButtons: document.querySelector('.results__pages')
 };
 export const elementsStrings = {
     loader: 'loader' //loader gej dood mornuuded css ner hamaagui bichigui ni tuld ene mor bgash bichsen tegeed dood morond .${elementsStrings.loader}...

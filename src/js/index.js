@@ -2,6 +2,7 @@ require("@babel/polyfill");
 import Search from './model/Search'; //search.js ee endee duudaj bna 
 import{elements, renderLoader, clearLoader} from './view/base';
 import * as searchView from './view/searchView';
+import Recipe from './model/recipe';
 
 
 
@@ -33,8 +34,20 @@ const controlSearch = async () => { //async nemej ogno await iig ashiglahiin tul
     }
 
 };
-elements.searchForm.addEventListener('submit', e =>{ //.search buyu haih hesegiin submit ruu e gej parameter ogood function hiih
+elements.searchForm.addEventListener('submit', e =>{
+//.search buyu haih hesegiin submit ruu e gej parameter ogood function hiih
     e.preventDefault(); //ene ni tsaanaasaa browser iin default iig boliuldag
     controlSearch();
 
 });
+elements.pageButtons.addEventListener('click', e =>{
+        const btn = e.target.closest('.btn-inline');//huudas 2 deer daraj 3 ruu shiljih. gehdee page deer um bicheegui ved yaj herhen inspect hiij huudasaa oloh be? shine arga bagsh: e.target buyu click hiigeed darsan umiig CLOSEST gej shine function ashiglasan, HTML target iin oir bgaa zuiliig songoh
+        if(btn){
+            const gotoPageNumber = parseInt(btn.dataset.goto, 10); //huudas 1 ees 2, 3 ruu shiljih, huudsaa zob 1 , 2, 3 gej 10 toon dotor buheleer ni gargah
+            searchView.clearSearchResult(); //huudas 2 deer daruul huudas 1 iin result alga bolno
+            searchView.renderRecipes(state.search.result, gotoPageNumber);
+        }
+});
+
+const r = new Recipe(47746);
+r.getRecipe();
