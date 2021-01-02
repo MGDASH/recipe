@@ -6,7 +6,12 @@ export const elements = {
     searchInput: document.querySelector('.search__field'),
     searchResultDiv: document.querySelector('.results'),//html iinhaa resultDiv dotor unshij bna gesen heseg hiih
     searchResultList: document.querySelector(".results__list"), //index.html eesee copydoj absan iisheegee inject hiine 
-    pageButtons: document.querySelector('.results__pages')
+    pageButtons: document.querySelector('.results__pages'),
+    recipeDiv: document.querySelector('.recipe'), // delgetsend jor gargah & tseberleh
+    shoppingList: document.querySelector('.shopping__list'),
+    likesMenu: document.querySelector('.likes__field'),
+    likesList: document.querySelector('.likes__list')
+
 };
 export const elementsStrings = {
     loader: 'loader' //loader gej dood mornuuded css ner hamaagui bichigui ni tuld ene mor bgash bichsen tegeed dood morond .${elementsStrings.loader}...

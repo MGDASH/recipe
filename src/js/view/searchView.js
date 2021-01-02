@@ -2,7 +2,7 @@ import {elements} from './base';
 
 //private function (daldalagdasan, zobhon export hiisen function l gadnas handana)
 const renderRecipe = recipe => {
-    console.log(recipe);
+    
     const markup = `
     <li>
                     <a class="results__link" href="#${recipe.recipe_id}">

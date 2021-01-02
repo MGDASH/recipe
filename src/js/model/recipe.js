@@ -19,4 +19,11 @@ export default class Recipe {
         this.social_rank = result.data.recipe.title;
      
     }
+    calcTime(){
+        //Nairlaga burt oiroltsoogoor 5 min zartsuulna, gej vzeed doorhi toog bodoh
+        this.time = this.ingredients.length * 5;
+    }
+    calcHuniiToo(){
+        this.huniiToo = 4; //oiroltsoogoor 4 gej hiisen 
+    }
 }
